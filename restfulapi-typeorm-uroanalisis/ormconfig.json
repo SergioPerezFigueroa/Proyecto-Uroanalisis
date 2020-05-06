@@ -1,0 +1,24 @@
+{
+    "type": "mssql",
+    "host": "20141900230.database.windows.net",
+    "port": 1433, 
+    "username":"Usagi",
+    "password":"Ventajadicto_cadaver666",
+    "database":"Ingreso_auto",
+    "options":{
+        "synchronize": true,
+        "logging": false,
+        "encrypt": true,
+        "enableArithAbort": true
+      },    
+      "entities": [
+         "src/entity/**/*.ts"
+      ],
+      "migrations": [
+         "src/migration/**/*.ts"
+      ],
+      "subscribers": [
+         "src/subscriber/**/*.ts"
+      ]
+   }
+   
