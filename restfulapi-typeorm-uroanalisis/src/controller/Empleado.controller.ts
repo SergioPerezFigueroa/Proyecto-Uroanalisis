@@ -35,3 +35,4 @@ export class EmpleadoController{
         this.app.route("/empleados").get(this.Empleado_service.getAll);
     }
 }
+
