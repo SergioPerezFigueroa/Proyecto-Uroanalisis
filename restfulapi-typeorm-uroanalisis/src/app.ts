@@ -11,20 +11,27 @@ config({"path": resolve(__dirname,"../.env")});
 import {createConnection} from "typeorm";
 
 import {MainController} from "./controller/main.controller";
+import{EmpleadoController} from "./controller/Empleado.controller"; 
+import {PacienteController} from "./controller/paciente.controller";
+
+
 //import {SupplierController} from "./controller/supplier.controller";
 
 class App{
 
     public app: Application;
     public main_controller: MainController;
-    //public supplier_controller: SupplierController;
+    public empleado_controller: EmpleadoController;
+    public paciente_controller : PacienteController;
 
     constructor(){
        this.app = express();
        this.setConfig();
        this.setDBConnection();
+
        this.main_controller = new MainController(this.app);
-       // this.supplier_controller = new SupplierController(this.app);
+       this.empleado_controller = new EmpleadoController(this.app);
+       this.paciente_controller= new PacienteController(this.app); 
     }
 
     private setConfig(){
@@ -39,9 +46,6 @@ class App{
         });
    
     } 
-
- 
-
 }
 
 export default new App().app;
