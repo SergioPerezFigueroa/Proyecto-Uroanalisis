@@ -11,5 +11,7 @@ export class PacienteController{
     private routes(){
 
         this.app.route("/pacientes").get(this.paciente_service.getAll);
+
+        this.app.route("/paciente/:id").put(this.paciente_service.updateOne);
     }
 }
