@@ -6,7 +6,7 @@ export class EmpleadoService{
 
     public async getAll(req: Request, res: Response){
         const Empleados = await getConnection().getRepository(Empleado).find();
-        res.status(200).json(Empleado);
+        res.status(200).json(Empleados);
     }
 
    /* //video 15
