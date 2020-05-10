@@ -11,14 +11,15 @@ export class ExamenController{
 
     private routes(){
 
-        //this.app.route("/examen/:id").get(this.examen_service.getOne);
         this.app.route("/examenes").get(this.examen_service.getAll);
 
         this.app.route("/examen/:id")
         .get(this.examen_service.getOneList)
         .put(this.examen_service.bigUpdate);//analista
 
-        
+        this.app.route("/examen/:id/Recepcionista").put(this.examen_service.smallUpdate);
+
+
         this.app.route("/examenesMedicos/:id").get(this.examen_service.getMedicalList);
 
         this.app.route("/examen")

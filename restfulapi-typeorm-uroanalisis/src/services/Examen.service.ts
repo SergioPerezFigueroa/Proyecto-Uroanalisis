@@ -64,7 +64,8 @@ export class ExamenService{
             })
         }
     }
-    //este endpoint es de medico (get fecha)
+    //este endpoint es de medico (get fecha) view
+    
     //este endpoint es de medico (get lista de pacientes)
     public async getMedicalList(req: Request, res: Response){
         const examenesMedicos = await getConnection().getRepository(Examen).find({where: {MedicoID: req.params.id}});
@@ -80,5 +81,25 @@ export class ExamenService{
         res.status(201).json(result[0])
     }
     //el put de resepcionista
+    public async smallUpdate(req: Request, res: Response){
+        try{
 
+            await getConnection().createQueryBuilder().update(Examen)
+            .set({
+                RecepcionistaID: req.body.RecepcionistaID
+            })
+            .where("ExamenID = :id",{id : req.params.id})
+            .execute();
+
+            res.status(200).json({
+                updated: true
+            });
+
+        }catch(Error){
+            res.status(401).json({
+                updated : false,
+                Message : Error.Message
+            })
+        }
+    }
 }
