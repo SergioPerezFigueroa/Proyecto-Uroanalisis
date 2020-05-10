@@ -13,7 +13,7 @@ import {createConnection} from "typeorm";
 import {MainController} from "./controller/main.controller";
 import{EmpleadoController} from "./controller/Empleado.controller"; 
 import {PacienteController} from "./controller/paciente.controller";
-
+import{ExamenController} from "./controller/Examen.controller";
 
 //import {SupplierController} from "./controller/supplier.controller";
 
@@ -23,6 +23,7 @@ class App{
     public main_controller: MainController;
     public empleado_controller: EmpleadoController;
     public paciente_controller : PacienteController;
+    public examen_controller: ExamenController;
 
     constructor(){
        this.app = express();
@@ -32,6 +33,7 @@ class App{
        this.main_controller = new MainController(this.app);
        this.empleado_controller = new EmpleadoController(this.app);
        this.paciente_controller= new PacienteController(this.app); 
+       this.examen_controller = new ExamenController(this.app);
     }
 
     private setConfig(){
