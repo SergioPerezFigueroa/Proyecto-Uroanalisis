@@ -41,3 +41,25 @@ export class Paciente{
     Observaciones:      String;
 
 }
+
+export interface IPaciente{    
+   
+   PacienteID :        number;
+   PrimerNombre:       String;  
+   SegundoNombre:      String;
+   PrimerApellido:     String;
+   SegundoApellido:    String;
+   Genero:             String;
+   FechaNacimiento:    Date;
+   EstadoCivil:        String; 
+   Direccion:          String;    
+   Email:              String;
+   Telefono:           String;
+   Observaciones:      String;
+
+}
+//manda el mensaje de encontro el resultado 
+export interface IResult{
+   Successed: boolean;
+   MSG: string
+}
