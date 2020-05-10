@@ -2,6 +2,7 @@ import {Application} from "express";
 import {EnfermeroService} from "../services/enfermero.service";
 
 
+
 export class EnfermeroController{
     Enfermero_service: EnfermeroService;
 
@@ -14,6 +15,8 @@ export class EnfermeroController{
        this.app.route("/enfermero/:id")
         .get(this.Enfermero_service.getOne); 
 
+        this.app.route("/paciente/:id")
+        .get(this.Enfermero_service.getResumen); 
 
         //this.app.route("/empleados").get(this.Empleado_service.getAll);
     }
