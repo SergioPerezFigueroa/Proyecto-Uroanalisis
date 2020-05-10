@@ -1,6 +1,6 @@
 import {Request, Response} from "express";
 import {getConnection} from "typeorm";
-import{Examen} from "../entity/examen.entity";
+import{Examen,IExamen,IResult} from "../entity/examen.entity";
 import{ViewExamenesDefault} from "../entity/ExamenesDefault.entity";
 
 export class ExamenService{
@@ -28,6 +28,13 @@ export class ExamenService{
         res.status(200).json(examenesMedicos);
     }
     //este endpoint es de medico (post) con balidacion
-    
+    public async createOne(req: Request, res: Response){
+        const e : IExamen = req.body;
+        const result : IResult[] = await getConnection().query(`EXEC proyecto.SP_CREATE_EXAM
+        @ExamenID = ${e.ExamenID},
+        @PacienteID = ${e.PacienteID},
+        @MedicoID = ${e.MedicoID}`);
+        res.status(201).json(result[0])
+    }
     //el put de resepcionista
 }

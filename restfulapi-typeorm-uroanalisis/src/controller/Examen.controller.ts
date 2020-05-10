@@ -15,5 +15,9 @@ export class ExamenController{
         this.app.route("/examenes").get(this.examen_service.getAll);
         this.app.route("/examen/:id").get(this.examen_service.getOneList);
         this.app.route("/examenesMedicos/:id").get(this.examen_service.getMedicalList);
+
+        this.app.route("/examen")
+        .post(this.examen_service.createOne);
+        
     }
 }

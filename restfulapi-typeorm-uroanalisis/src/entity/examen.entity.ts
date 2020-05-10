@@ -83,3 +83,14 @@ export class Examen{
     @Column()
     Observaciones :        String;
 }
+
+export interface IExamen{
+    ExamenID :          number;
+    PacienteID :        number;
+    MedicoID :          number;
+}
+
+export interface IResult{
+    successed : boolean;
+    MSG : String
+}
