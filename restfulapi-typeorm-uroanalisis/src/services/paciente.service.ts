@@ -1,6 +1,6 @@
 import {Request, Response} from "express";
 import {getConnection} from "typeorm";
-import{Paciente} from "../entity/paciente.entity"
+import{Paciente,IPaciente,IResult} from "../entity/paciente.entity"
 
 
 export class PacienteService{
@@ -42,10 +42,30 @@ export class PacienteService{
                 updated: false,
                 Message: Error.Message
             });
-} 
+        } 
 
+    }
 
-   }
+    public  async CreateOne(req: Request, res: Response){
+
+        const p: IPaciente = req.body;
+        const result: IResult[] = await getConnection().query(`EXEC example.SP_CREATE_SUPPLIER 
+
+        @PacienteID   @SupplierID = ${s.SupplierID},   
+        @PrimerNombre   
+        @SegundoNombre  
+        @PrimerApellido 
+        @SegundoApellido
+        @Genero         
+        @FechaNacimiento
+        @EstadoCivil    
+        @Direccion      
+        @Email          
+        @Telefono       
+        @Observaciones  
+        res.status(201).json(result[0])
+    }
+   
    
 }
 
