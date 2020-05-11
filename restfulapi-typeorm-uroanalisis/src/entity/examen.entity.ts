@@ -27,7 +27,7 @@ export class Examen{
     Aspecto :            String;
 
     @Column()
-    Gravedad_especifica : number;           ;
+    Gravedad_especifica : number;           
 
     @Column()
     Esteresa_leucositoria : String;
@@ -94,3 +94,41 @@ export interface IResult{
     successed : boolean;
     MSG : String
 }
+
+export interface DateExam{
+    Fecha_inicial : String;
+    Fecha_final : String
+}
+
+
+export interface IResultExaHechos{
+     ExamenID :                 number;
+     PacienteID :               number;
+     nombre_paciente :          String;
+     apellido_paciente :        String;
+     nombre_medico :            String;
+     apellido_medico :          String;
+     fecha :                    Date;
+     Color :                    String;
+     Aspecto :                  String;
+     Gravedad_especifica :      number;
+     Esteresa_leucositoria :    String;
+     Nitritos :                 String;
+     Ph    :                    number;
+     Proteinas :                String;
+     Glucosa :                  String;
+     Cuerpos_cetonicos :        String;
+     Urobililinogenos  :        number;
+     Bilirubina :               String;
+     Sangre :                   String;
+     Celulas_epiteliales :      String;
+     Erotrocitos :              String;
+     Leucositos :               String;
+     Bacterias :                String;
+     Mucus :                    String;
+     Cristales :                String;
+     Cilindors :                String;
+     Levaduras :                String;
+     Observaciones :            String;
+}
+

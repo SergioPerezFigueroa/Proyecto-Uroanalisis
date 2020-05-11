@@ -1,6 +1,6 @@
 import {Request, Response} from "express";
 import {getConnection} from "typeorm";
-import{Examen,IExamen,IResult} from "../entity/examen.entity";
+import{Examen,IExamen,IResult,DateExam,IResultExaHechos} from "../entity/examen.entity";
 import{ViewExamenesDefault} from "../entity/ExamenesDefault.entity";
 
 export class ExamenService{
@@ -64,8 +64,16 @@ export class ExamenService{
             })
         }
     }
-    //este endpoint es de medico (get fecha) view
-    
+    //este endpoint es de medico (get fecha) view con body
+    //proyecto.SP_DATE_EXAM
+    public async getDateExam(req: Request, res: Response){
+        const er : DateExam = req.body;
+        const resultados : IResultExaHechos []= await getConnection().query(`EXEC proyecto.SP_DATE_EXAM
+        @Fecha_inicial = ${er.Fecha_inicial},
+        @Fecha_final = ${er.Fecha_final}`);
+        res.status(201).json(resultados )
+        
+    }
     //este endpoint es de medico (get lista de pacientes)
     public async getMedicalList(req: Request, res: Response){
         const examenesMedicos = await getConnection().getRepository(Examen).find({where: {MedicoID: req.params.id}});

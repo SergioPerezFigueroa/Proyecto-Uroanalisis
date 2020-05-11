@@ -14,7 +14,7 @@ import {MainController} from "./controller/main.controller";
 import{EmpleadoController} from "./controller/Empleado.controller"; 
 import {PacienteController} from "./controller/paciente.controller";
 import{ExamenController} from "./controller/Examen.controller";
-
+import{ConsultaController} from "./controller/Consulta.controller";
 //import {SupplierController} from "./controller/supplier.controller";
 
 class App{
@@ -24,6 +24,7 @@ class App{
     public empleado_controller: EmpleadoController;
     public paciente_controller : PacienteController;
     public examen_controller: ExamenController;
+    public consulta_controller: ConsultaController;
 
     constructor(){
        this.app = express();
@@ -34,6 +35,7 @@ class App{
        this.empleado_controller = new EmpleadoController(this.app);
        this.paciente_controller= new PacienteController(this.app); 
        this.examen_controller = new ExamenController(this.app);
+       this.consulta_controller = new ConsultaController(this.app);
     }
 
     private setConfig(){

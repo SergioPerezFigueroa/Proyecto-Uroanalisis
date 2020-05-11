@@ -19,6 +19,9 @@ export class ExamenController{
 
         this.app.route("/examen/:id/Recepcionista").put(this.examen_service.smallUpdate);
 
+        
+        this.app.route("/exameneshechos").post(this.examen_service.getDateExam);
+
 
         this.app.route("/examenesMedicos/:id").get(this.examen_service.getMedicalList);
 
