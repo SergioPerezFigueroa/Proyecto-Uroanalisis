@@ -2,14 +2,14 @@ import {Application} from "express";
 import {PreClinicaService} from "../services/PreClinica.service";
 
 export class PreClinicaController{
-    PreClinica_service:PreClinicaService  ;
+    preclinica_service:PreClinicaService  ;
 
     constructor(private app: Application){
-        this.PreClinica_service= new PreClinicaService();
+        this.preclinica_service= new PreClinicaService();
         this.routes();
     }
     private routes(){
 
-        this.app.route("/PreClinica").get(this.PreClinica_service.getAll);
+        this.app.route("/preclinica").get(this.preclinica_service.getAll);
     }
 }
