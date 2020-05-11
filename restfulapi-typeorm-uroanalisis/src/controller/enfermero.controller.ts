@@ -18,6 +18,14 @@ export class EnfermeroController{
         this.app.route("/paciente/:id")
         .get(this.Enfermero_service.getResumen); 
 
+        this.app.route("/paciente/:id/historial_examen")
+        .get(this.Enfermero_service.getHistorialExamne);
+
+        this.app.route("/paciente/:id/historial_consulta")
+        .get(this.Enfermero_service.getHistorialConsulta);
+
+        this.app.route("/nuevos_pacientes")
+        .get(this.Enfermero_service.getHistorialConsulta);
         //this.app.route("/empleados").get(this.Empleado_service.getAll);
     }
 }

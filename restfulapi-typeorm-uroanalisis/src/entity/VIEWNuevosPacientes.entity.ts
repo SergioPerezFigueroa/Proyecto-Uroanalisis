@@ -1,9 +1,9 @@
 import {ViewEntity, ViewColumn} from "typeorm";
 
 
-@ViewEntity({schema:"proyecto", database:"ingreso_auto", name:"VIEWPacienteByResumen"})
+@ViewEntity({schema:"proyecto", database:"ingreso_auto", name:"VIEWNuevosPacientes"})
 
-export class VIEWPacienteByResumen{
+export class VIEWNuevosPacientes{
 
     @ViewColumn()
     PacienteID: number ; 
@@ -18,8 +18,6 @@ export class VIEWPacienteByResumen{
     @ViewColumn()
     Edad: number; 
     @ViewColumn()
-    Email:String;
-    @ViewColumn()
-    Telefono: String
+    Genero: String;
   
 }

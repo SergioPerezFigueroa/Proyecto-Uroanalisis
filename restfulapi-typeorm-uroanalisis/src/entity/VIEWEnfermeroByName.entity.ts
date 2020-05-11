@@ -5,7 +5,7 @@ import {ViewEntity, ViewColumn} from "typeorm";
 
 export class VIEWEnfermeroByName{
     @ViewColumn()
-    EmpleadoID: String ; 
+    EmpleadoID: number; 
     @ViewColumn()
     PrimerNombre: String  ; 
     @ViewColumn()
