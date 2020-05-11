@@ -10,7 +10,8 @@ export class PreClinica{
    @Column()
     PacienteID:number;
     @Column()
-    EnfermeraID:number;
+
+    EnfermeroID:number;
     
     @Column()
 
