@@ -5,7 +5,8 @@ import {VIEWEnfermeroByName} from "../entity/VIEWEnfermeroByName.entity" ;
 import{VIEWPacienteByResumen} from "../entity/PacienteByResumen.entity";
 import{VIEWHistorialExamen} from "../entity/VIEWHistorialExamen.entity"; 
 import{VIEWHistorialConsulta}  from "../entity/VIEWHistorialConsulta.entity"; 
-import{VIEWNuevosPacientes} from "../entity/VIEWNuevosPacientes.entity"
+import{VIEWNuevosPacientes} from "../entity/VIEWNuevosPacientes.entity";
+import{VIEWHistorialPreclinica}from "../entity/VIEWHistorialPreclinica.entity";
 
 
 export class EnfermeroService{
@@ -34,5 +35,9 @@ export class EnfermeroService{
       public  async getNuevosPacientes(req: Request, res: Response){
         const nuevo: VIEWNuevosPacientes[] = await getConnection().getRepository(VIEWNuevosPacientes).find(); 
         res.status(200).json(nuevo);
+      }
+      public  async getHistorialPreclinica(req: Request, res: Response){
+        const preclinica: VIEWHistorialPreclinica[] = await getConnection().getRepository(VIEWHistorialPreclinica).find({ where :{PacienteID: req.params.id } }); 
+        res.status(200).json(preclinica);
       }
 }
