@@ -18,7 +18,7 @@ export class PreClinica{
     MedicoID:number;
     @Column ()
 
-    Fecha:String;
+    Fecha:Date;
     @Column ()
 
     Presion:number;
