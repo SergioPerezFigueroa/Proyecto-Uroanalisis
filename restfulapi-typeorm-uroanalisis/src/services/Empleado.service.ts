@@ -1,6 +1,7 @@
 import {Request, Response} from "express";
 import {getConnection} from "typeorm";
 import {Empleado} from "../entity/Empleado.entity"
+import { Paciente } from "../entity/paciente.entity";
 
 export class EmpleadoService{
 
@@ -8,7 +9,7 @@ export class EmpleadoService{
         const Empleados = await getConnection().getRepository(Empleado).find();
         res.status(200).json(Empleados);
     }
-
+    
    /* //video 15
     public async getOne(req: Request ,  res: Response){
         const supplier :Supplier[] = await getConnection().getRepository(Supplier).find({ where :{SupplierID: req.params.id } }); 
