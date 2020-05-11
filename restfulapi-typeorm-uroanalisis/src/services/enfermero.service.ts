@@ -22,7 +22,7 @@ export class EnfermeroService{
     }
  
 
-    public  async getHistorialExamne(req: Request, res: Response){
+    public  async getHistorialExamen(req: Request, res: Response){
       const examen: VIEWHistorialExamen[] = await getConnection().getRepository(VIEWHistorialExamen).find({ where :{PacienteID: req.params.id } }); 
       res.status(200).json(examen);
       }

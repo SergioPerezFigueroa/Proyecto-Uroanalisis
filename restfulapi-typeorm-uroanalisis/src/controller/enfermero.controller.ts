@@ -15,11 +15,11 @@ export class EnfermeroController{
        this.app.route("/enfermero/:id")
         .get(this.Enfermero_service.getNombreEnferemera);
 
-        this.app.route("/paciente/:id")
+        this.app.route("/paciente/:id/resumen")
         .get(this.Enfermero_service.getResumen); 
 
         this.app.route("/paciente/:id/historial_examen")
-        .get(this.Enfermero_service.getHistorialExamne);
+        .get(this.Enfermero_service.getHistorialExamen);
 
         this.app.route("/paciente/:id/historial_consulta")
         .get(this.Enfermero_service.getHistorialConsulta);
