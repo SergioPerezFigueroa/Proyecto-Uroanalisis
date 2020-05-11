@@ -9,7 +9,10 @@ export class PreClinicaService{
         res.status(200).json(preclinica);
     }
 
-} 
-
+    public async getOne(req: Request, res: Response){ 
+        const preclinica : PreClinica [] = await getConnection().getRepository(PreClinica).find( {where : { PreClinicaID: req.params.ID } });
+        res.status(200).json(preclinica[0]);
+    }
+}    
 
 
