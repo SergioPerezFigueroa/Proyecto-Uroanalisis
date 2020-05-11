@@ -6,7 +6,7 @@ import{Paciente,IPaciente,IResult} from "../entity/paciente.entity"
 export class PacienteService{
 
     public async getAll(req: Request, res: Response){
-        //el paceinte es el mismo de abajo del .json(paciente)  
+        //el paciente es el mismo de abajo del .json(paciente)  
         const paciente = await getConnection().getRepository(Paciente).find();
         res.status(200).json(paciente);
     }
@@ -49,20 +49,20 @@ export class PacienteService{
     public  async CreateOne(req: Request, res: Response){
 
         const p: IPaciente = req.body;
-        const result: IResult[] = await getConnection().query(`EXEC example.SP_CREATE_SUPPLIER 
+        const result: IResult[] = await getConnection().query(`EXEC proyecto.SP_CREATE_PACIENTES
 
-        @PacienteID   @SupplierID = ${s.SupplierID},   
-        @PrimerNombre   
-        @SegundoNombre  
-        @PrimerApellido 
-        @SegundoApellido
-        @Genero         
-        @FechaNacimiento
-        @EstadoCivil    
-        @Direccion      
-        @Email          
-        @Telefono       
-        @Observaciones  
+        @PacienteID = ${p.PacienteID},   
+        @PrimerNombre  = ${p.PrimerNombre} ,
+        @SegundoNombre = '${p.SegundoNombre}',
+        @PrimerApellido = '${p.PrimerApellido}',
+        @SegundoApellido= '${p.SegundoApellido}',
+        @Genero         =' ${p.Genero}',
+        @FechaNacimiento= '${p.FechaNacimiento}',
+        @EstadoCivil    = '${p.EstadoCivil}',
+        @Direccion      =' ${p.Direccion}',
+        @Email          =' ${p.Email}',
+        @Telefono       =' ${p.Telefono}',
+        @Observaciones  =' ${p.Observaciones}'`);
         res.status(201).json(result[0])
     }
    
