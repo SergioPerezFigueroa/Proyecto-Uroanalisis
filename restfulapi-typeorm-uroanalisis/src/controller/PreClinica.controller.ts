@@ -13,6 +13,9 @@ export class PreClinicaController{
         this.app.route("/preclinica/:ID")
         .get(this.preclinica_service.getOne)
         .put(this.preclinica_service.updateOne);
+        this.app.route("/preclinica")
+        .post (this.preclinica_service.createOne);
         this.app.route("/preclinica").get(this.preclinica_service.getAll);
+       
     }
 }

@@ -36,3 +36,22 @@ export class PreClinica{
 
 
 }
+
+export interface IPreClinica{    
+  
+
+    PreClinicaID:number;
+    PacienteID:number;
+    EnfermeroID:number;
+    MedicoID:number;
+    Fecha:Date;
+    Presion:number;
+    Altura:number;
+    Peso:number;
+    Temperatura:number;
+}
+
+export interface IResult{
+    Successed: boolean;
+    MSG: string
+ }

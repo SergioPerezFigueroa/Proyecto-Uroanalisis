@@ -1,6 +1,6 @@
 import {Request, Response} from "express";
 import {getConnection} from "typeorm";
-import{PreClinica} from "../entity/PreClinica.entity"
+import{PreClinica,IPreClinica,IResult} from "../entity/PreClinica.entity"
 
 export class PreClinicaService{
 
@@ -46,6 +46,20 @@ export class PreClinicaService{
         }
 
     }
-}    
+    public async createOne(req: Request, res: Response){
+        const pr :IPreClinica= req.body;
+        const result: IResult [] = await getConnection().query(`EXEC proyecto.SP_CREATE_PRECLINICA
+           @PreClinicaID = ${pr.PreClinicaID},
+            @PacienteID = ${pr.PacienteID},   
+            @EnfermeroID  = ${pr.EnfermeroID} ,
+            @MedicoID = '${pr.MedicoID}',
+            @Fecha = '${pr.Fecha}',
+            @Presion= '${pr.Presion}',
+            @Altura =' ${pr.Altura}',
+            @Peso = '${pr.Peso}',
+            @Temperatura    = '${pr.Temperatura}'`);
+            res.status(201).json(result[0])
 
+    }   
+}    
 
