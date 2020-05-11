@@ -25,15 +25,7 @@ export class EnfermeroController{
         .get(this.Enfermero_service.getHistorialConsulta);
 
         this.app.route("/nuevos_pacientes")
-<<<<<<< HEAD
         .get(this.Enfermero_service.getNuevosPacientes);
         //this.app.route("/empleados").get(this.Empleado_service.getAll);
-=======
-        .get(this.Enfermero_service.getHistorialConsulta);
-        
-        this.app.route("/paciente/:id/historial_preclinica")
-        .get(this.Enfermero_service.getHistorialPreclinica);
->>>>>>> c3122c20dec96e0a316259baf23436227ff4280e
     }
 }
-
