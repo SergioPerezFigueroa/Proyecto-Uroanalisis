@@ -10,7 +10,7 @@ import{VIEWNuevosPacientes} from "../entity/VIEWNuevosPacientes.entity"
 
 export class EnfermeroService{
 
-      public async getOne(req: Request, res: Response){
+      public async getNombreEnferemera(req: Request, res: Response){
         const Enfermero :VIEWEnfermeroByName[] = await getConnection().getRepository(VIEWEnfermeroByName).find({ where :{EmpleadoID: req.params.id } }); 
         res.status(200).json(Enfermero[0]);
     }

@@ -13,7 +13,7 @@ export class EnfermeroController{
     private routes(){
 
        this.app.route("/enfermero/:id")
-        .get(this.Enfermero_service.getOne); 
+        .get(this.Enfermero_service.getNombreEnferemera);
 
         this.app.route("/paciente/:id")
         .get(this.Enfermero_service.getResumen); 
@@ -25,7 +25,7 @@ export class EnfermeroController{
         .get(this.Enfermero_service.getHistorialConsulta);
 
         this.app.route("/nuevos_pacientes")
-        .get(this.Enfermero_service.getHistorialConsulta);
+        .get(this.Enfermero_service.getNuevosPacientes);
         //this.app.route("/empleados").get(this.Empleado_service.getAll);
     }
 }
