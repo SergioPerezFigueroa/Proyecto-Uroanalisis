@@ -1,0 +1,17 @@
+CREATE PROCEDURE proyecto.S_P_LOGIN
+  @EmpleadoID int, 
+  @Password NVARCHAR(200)
+
+AS
+
+DECLARE @existe INT = (SELECT count(*) as N FROM proyecto.Empleado WHERE EmpleadoID = @EmpleadoID and [Password]=@Password)
+
+IF @existe > 0 BEGIN
+    SELECT 0 as Successed, 'INGRESO CORRECTO ' as MSG
+END ELSE BEGIN
+
+    
+    SELECT 1 as Successed, 'EL ID de empleado y su Password no coinciden, vuelva a intentarlo' as MSG
+    
+END
+
