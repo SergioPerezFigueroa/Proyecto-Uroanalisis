@@ -43,3 +43,15 @@ export class Empleado{
     Observaciones:      String;
 
 }
+
+export interface Ilogin{    
+    EmpleadoID : number ; 
+    Password : String ; 
+   
+}
+//manda el mensaje de encontro el resultado 
+export interface IResult{
+    Successed: boolean;
+    MSG: string
+}
+

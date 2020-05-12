@@ -11,28 +11,10 @@ export class EmpleadoController{
     }
     private routes(){
 
-       // this.app.route("/supplier/:id/summary")
-        //.get(this.supplier_service.getOneSummary); 
-
-
-       /* this.app.route("/supplier/:id")
-        .get(this.supplier_service.getOne)
-        .put(this.supplier_service.updateOne);
-
-    
-       this.app.route("/supplier/:id/summary")
-        .get(this.supplier_service.getOneSummary);
-
-        this.app.route("/supplier")
-        .post(this.supplier_service.createOne);
-
-        this.app.route("/supplier/:id")
-        .get(this.supplier_service.getOne)
-        .put(this.supplier_service.updateOne)
-        .delete(this.supplier_service.deleteOne);        
-        */
-
         this.app.route("/empleados").get(this.Empleado_service.getAll);
+
+        this.app.route ("/login")
+        .post(this.Empleado_service.Login)
     }
 }
 
