@@ -1,0 +1,29 @@
+create VIEW proyecto.VIEWHistorialExamen
+AS   
+
+    SELECT 
+            PacienteID,
+            fecha ,
+            em.PrimerNombre ,
+            em.SegundoNombre, 
+            em.PrimerApellido, 
+            em.SegundoApellido
+    from proyecto.Examenes as e 
+    
+    inner JOIN  proyecto.Empleado as em
+    on  e.MedicoID=em.EmpleadoID
+    GROUP BY 
+    
+            PacienteID,
+             fecha ,
+             MedicoID, 
+             em.PrimerNombre ,
+             em.SegundoNombre, 
+             em.PrimerApellido, 
+             em.SegundoApellido
+    
+    ORDER BY  fecha desc
+
+    ---- WHERE e.PacienteID=801199
+
+    OFFSET 0 ROWS FETCH NEXT 10 ROWS ONLY 

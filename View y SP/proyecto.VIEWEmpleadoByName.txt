@@ -1,0 +1,24 @@
+CREATE VIEW proyecto.VIEWEmpleadoByName
+
+As 
+
+SELECT 
+    e.EmpleadoID, 
+    PrimerNombre, 
+    SegundoNombre, 
+    PrimerApellido, 
+    SegundoApellido
+
+    from proyecto.Empleado as e 
+    INNER JOIN  proyecto.TipoEmpleado as t
+    on e.TipoEmpleadoID=t.TipoEmpleadoID
+
+    GROUP BY e.EmpleadoID,          
+            PrimerNombre, 
+            SegundoNombre, 
+            PrimerApellido, 
+            SegundoApellido
+
+    ORDER BY e.EmpleadoID 
+
+    OFFSET 0 ROWS FETCH NEXT 10 ROWS ONLY 
