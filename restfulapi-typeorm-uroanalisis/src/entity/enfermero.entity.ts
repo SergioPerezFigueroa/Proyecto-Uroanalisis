@@ -1,7 +1,7 @@
 import {Entity, Column, PrimaryColumn} from "typeorm";
 
 @Entity({schema:"proyecto", database:"ingreso_auto", name:"Empleado"})
-export class Empleado{
+export class Enfermero{
    @PrimaryColumn()
     EmpleadoID :        number;
 
@@ -43,15 +43,3 @@ export class Empleado{
     Observaciones:      String;
 
 }
-
-export interface Ilogin{    
-    EmpleadoID : number ; 
-    Password : String ; 
-   
-}
-//manda el mensaje de encontro el resultado 
-export interface IResult{
-    Successed: boolean;
-    MSG: string
-}
-
