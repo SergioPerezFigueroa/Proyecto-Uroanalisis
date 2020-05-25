@@ -1,0 +1,41 @@
+CREATE PROCEDURE proyecto.SP_CREATE_PACIENTES
+        @PacienteID INT,
+        @PrimerNombre NVARCHAR(200),
+        @SegundoNombre NVARCHAR(200),
+        @PrimerApellido NVARCHAR(200),
+        @SegundoApellido NVARCHAR(200),
+        @Genero NVARCHAR(200),
+        @FechaNacimiento DATE,
+        @EstadoCivil NVARCHAR(100),
+        @Direccion NVARCHAR(200),
+        @Email NVARCHAR(200),
+        @Telefono NVARCHAR(200),
+        @Observaciones NVARCHAR(MAX)
+        
+AS
+
+DECLARE @existe INT = (SELECT count(*) as N FROM  proyecto.Pacientes WHERE PacienteID = @PacienteID)
+
+
+IF @existe > 0 BEGIN
+    SELECT 0 as Successed, 'El ID Paciente ingresado ya existe!' as MSG
+END ELSE BEGIN
+
+    INSERT INTO proyecto.Pacientes
+    VALUES (@PacienteID ,
+        @PrimerNombre ,
+        @SegundoNombre ,
+        @PrimerApellido,
+        @SegundoApellido ,
+        @Genero ,
+        @FechaNacimiento ,
+        @EstadoCivil ,
+        @Direccion ,
+        @Email ,
+        @Telefono ,
+        @Observaciones)
+
+    SELECT 1 as Successed, 'Tu registro fue almacenado' as MSG
+    
+END
+
