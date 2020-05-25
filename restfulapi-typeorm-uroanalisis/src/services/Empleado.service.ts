@@ -10,6 +10,7 @@ export class EmpleadoService{
         res.status(200).json(Empleados);
     }
 
+
     public async Login(req:Request, res:Response){
         const i: Ilogin = req.body;
         const result: IResult[] = await getConnection().query(`EXEC proyecto.S_P_LOGIN
@@ -22,5 +23,6 @@ export class EmpleadoService{
     
         
 }
+
        
     

@@ -1,0 +1,31 @@
+//view historial preclinica
+CREATE VIEW proyecto.VIEWHistorialPreclinica
+AS
+SELECT  
+        [PacienteID],
+        [Fecha],
+        [Presion],
+        [Altura],
+        [Peso],
+        [Temperatura],
+        [PrimerNombre],
+        [SegundoNombre],
+        [PrimerApellido],
+        [SegundoApellido]
+  FROM [proyecto].[PreClinica] as pc
+  INNER JOIN proyecto.Empleado as e
+  ON pc.MedicoID=e.EmpleadoID
+  GROUP BY
+        [PacienteID],
+        [Fecha],
+        [Presion],
+        [Altura],
+        [Peso],
+        [Temperatura],
+        [PreClinicaID],
+        [PrimerNombre],
+        [SegundoNombre],
+        [PrimerApellido],
+        [SegundoApellido]
+      Order By Fecha DESC
+      OFFSET 0 ROWS FETCH NEXT 10 ROWS ONLY 

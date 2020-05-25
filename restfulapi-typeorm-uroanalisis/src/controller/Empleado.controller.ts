@@ -11,6 +11,8 @@ export class EmpleadoController{
     }
     private routes(){
 
+
+
         this.app.route("/empleados").get(this.Empleado_service.getAll);
 
         this.app.route ("/login")
