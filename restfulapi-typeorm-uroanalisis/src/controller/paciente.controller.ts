@@ -12,7 +12,13 @@ export class PacienteController{
 
         this.app.route("/pacientes").get(this.paciente_service.getAll);
 
+
         this.app.route("/paciente/:id").put(this.paciente_service.updateOne);
         this.app.route("/paciente").post(this.paciente_service.CreateOne);
+
+        this.app.route("/pacientes/:id").get(this.paciente_service.getOne);
+
+        this.app.route("/examenaprobado/:id").get(this.paciente_service.getAprobate);
+
     }
 }

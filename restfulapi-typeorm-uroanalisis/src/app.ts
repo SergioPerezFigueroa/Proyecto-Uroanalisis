@@ -14,11 +14,16 @@ import {MainController} from "./controller/main.controller";
 import{EmpleadoController} from "./controller/Empleado.controller"; 
 import {PacienteController} from "./controller/paciente.controller";
 
+
 import {EnfermeroController} from "./controller/enfermero.controller"; 
 
 
 
 import {PreClinicaController} from "./controller/PreClinica.controller";
+
+
+import{ExamenController} from "./controller/Examen.controller";
+import{ConsultaController} from "./controller/Consulta.controller";
 
 //import {SupplierController} from "./controller/supplier.controller";
 
@@ -28,6 +33,8 @@ class App{
     public main_controller: MainController;
     public empleado_controller: EmpleadoController;
     public paciente_controller : PacienteController;
+    public examen_controller: ExamenController;
+    public consulta_controller: ConsultaController;
 
     public enfermero_controller : EnfermeroController ; 
 
@@ -43,9 +50,14 @@ class App{
        this.empleado_controller = new EmpleadoController(this.app);
        this.paciente_controller= new PacienteController(this.app); 
 
+
        this.enfermero_controller= new EnfermeroController(this.app); 
 
        this.PreClinica_controller= new PreClinicaController(this.app); 
+
+
+       this.examen_controller = new ExamenController(this.app);
+       this.consulta_controller = new ConsultaController(this.app);
 
     }
 
