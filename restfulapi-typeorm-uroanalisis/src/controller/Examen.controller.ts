@@ -27,6 +27,8 @@ export class ExamenController{
 
         this.app.route("/examen")
         .post(this.examen_service.createOne);
+
+        this.app.route("/examenes/:id").get(this.examen_service.getOne);
         
 
         
