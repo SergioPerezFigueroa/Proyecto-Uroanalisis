@@ -1,7 +1,7 @@
 import {ViewEntity, ViewColumn, DatabaseType} from "typeorm";
 
 
-@ViewEntity({schema:"proyecto", database:"ingreso_auto", name:"VIEWHistorialExamen"})
+@ViewEntity({schema:"proyecto", database:"ingreso_vehiculos", name:"VIEWHistorialExamen"})
 
 export class VIEWHistorialExamen{
     @ViewColumn()

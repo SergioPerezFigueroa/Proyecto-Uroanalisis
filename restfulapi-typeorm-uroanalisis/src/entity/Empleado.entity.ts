@@ -42,6 +42,9 @@ export class Empleado{
     @Column()
     Observaciones:      String;
 
+
+
+
 }
 
 export interface Ilogin{    
