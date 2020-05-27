@@ -1,0 +1,16 @@
+CREATE VIEW proyecto.VIEWPacienteByResumen
+AS 
+SELECT 
+    PacienteID,
+    PrimerNombre,
+    segundoNombre, 
+    PrimerApellido, 
+    SegundoApellido,
+    DATEDIFF(DAY, FechaNacimiento,GETDATE())/365 AS Edad , 
+    Email,
+    Telefono
+FROM proyecto.Pacientes 
+
+ORDER bY PacienteID desc
+
+ OFFSET 0 ROWS FETCH NEXT 10 ROWS ONLY 
