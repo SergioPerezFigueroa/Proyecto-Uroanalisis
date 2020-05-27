@@ -1,6 +1,6 @@
 import {ViewEntity,ViewColumn, Column} from "typeorm";
 
-@ViewEntity({schema:"proyecto", database:"ingreso_auto", name:"AprobacionExamen"})
+@ViewEntity({schema:"proyecto", database:"ingreso_vehiculos", name:"AprobacionExamen"})
 export class AprobacionExamen{
         @ViewColumn()
         PrimerNombre :          string;
