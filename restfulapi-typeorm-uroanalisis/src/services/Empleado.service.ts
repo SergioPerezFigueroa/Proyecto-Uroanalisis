@@ -3,7 +3,6 @@ import {getConnection} from "typeorm";
 
 //import { MessagePort } from "worker_threads";
 import {Empleado,Ilogin,IResult} from "../entity/Empleado.entity"
-
 import { Paciente } from "../entity/paciente.entity";
 
 
