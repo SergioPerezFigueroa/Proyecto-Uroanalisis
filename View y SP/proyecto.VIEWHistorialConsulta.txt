@@ -1,0 +1,36 @@
+create VIEW proyecto.VIEWHistorialConsulta
+AS
+
+    SELECT 
+            PacienteID,
+            fecha,
+            Sintomas, 
+            Receta,
+            em.PrimerNombre ,
+            em.SegundoNombre, 
+            em.PrimerApellido, 
+            em.SegundoApellido
+    from proyecto.Consulta as c
+    
+    inner JOIN  proyecto.Empleado as em
+    on  c.MedicoID=em.EmpleadoID
+    GROUP BY 
+    
+           
+           PacienteID,
+            fecha,
+            Sintomas, 
+            Receta,
+            em.PrimerNombre ,
+            em.SegundoNombre, 
+            em.PrimerApellido, 
+            em.SegundoApellido
+    
+    ORDER BY  fecha desc
+
+  OFFSET 0 ROWS FETCH NEXT 10 ROWS ONLY 
+
+
+
+
+

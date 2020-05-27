@@ -1,0 +1,28 @@
+CREATE PROCEDURE proyecto.SP_CREATE_PRECLINICA
+        @PreClinicaID int,
+        @PacienteID int,
+        @EnfermeroID int,
+        @MedicoID int,
+        @Fecha date,
+        @Presion int,
+        @Altura numeric,
+        @Peso  numeric,
+        @Temperatura numeric
+AS
+
+DECLARE @existe INT = (SELECT count(*) as N FROM proyecto.PreClinica WHERE PreClinicaID =  @PreClinicaID)
+
+
+IF @existe > 0 BEGIN
+    SELECT 0 as Successed, 'El ID enviado ya existe' as MSG
+END ELSE BEGIN
+
+    INSERT INTO proyecto.PreClinica
+    VALUES (@PreClinicaID,@PacienteID,@EnfermeroID, @MedicoID, @Fecha, @Presion, @Altura,@Peso, @Temperatura)
+
+    SELECT 1 as Successed, 'Tu registro fue almacenado' as MSG
+    
+END 
+
+
+SELECT * from proyecto.examenes
