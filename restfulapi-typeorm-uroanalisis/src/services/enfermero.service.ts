@@ -17,7 +17,7 @@ export class EnfermeroService{
     }
 
     public async getResumen(req: Request, res: Response){
-        const Paciente :VIEWPacienteByResumen[] = await getConnection().getRepository(VIEWPacienteByResumen).find({ where :{PacienteID: req.params.id } }); 
+        const Paciente :VIEWPacienteByResumen[] = await getConnection().getRepository(VIEWPacienteByResumen).find({ where :{PacienteID: parseInt(req.params.id) } }); 
         res.status(200).json(Paciente[0]);
     }
  

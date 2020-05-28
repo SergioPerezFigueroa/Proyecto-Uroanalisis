@@ -3,25 +3,25 @@ $(document).ready(function(){
     console.log('funciona');
   });
 
-  $('#btn-guarar').click(function(){
-  var parametros = 'EmpleadoID='+$('#id').val()+"&"+'Password='+$('#password').val(); 
+  $('#btn-buscar').click(function(){
+  var parametros = $('#id').val(); 
   console.log("enviando: "+parametros);
+  console.log(typeof parametros);
+  //console.log("combertido a :");
+  //parametros = parseInt(parametros);
+  //console.log(typeof parametros +"  "+ parametros);
   
-  
+    
     $.ajax({
-        url:"http://localhost:3007/login",
-        type: 'POST',
-        format: 'json',
-        data:parametros,
-        dataType: "json",
+        url:`http://localhost:3007/enfermero/${parametros}`,
+        type: 'GET',
         success:function(respuesta){
             console.log(respuesta);
-            //$('#contenedor-respuesta').append(``);
       },error:function(error){
         console.error(error);
         console.log("no regreso respuesta");
       }
     });
     
-    
+
   });

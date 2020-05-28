@@ -19,7 +19,7 @@ export class EmpleadoService{
     public async Login(req:Request, res:Response){
         const i: Ilogin = req.body;
         const result: IResult[] = await getConnection().query(`EXEC proyecto.S_P_LOGIN
-        @EmpleadoID = ${i.EmpleadoID},
+        @EmpleadoID = '${i.EmpleadoID}',
         @Password = '${i.Password}'`);
         res.status(201).json(result[0])
 
