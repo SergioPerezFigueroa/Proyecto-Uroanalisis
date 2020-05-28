@@ -20,6 +20,11 @@
         <div class="row">
             <input type="text" placeholder="ID Paciente" id="id"></input>
             <button type="button" id="btn">buscar</button>
+            <div class="form-group">
+                <select class="form-control" id="seleccion">
+                  
+                </select>
+              </div>  
             <form>
              <table class="table table-bordered">
                  <thead>
@@ -29,16 +34,18 @@
                  </thead>
                  <tbody>
                    <tr>
-                     <td scope="row">id recepcionista</td>
-                     <td id="recepcionista"></td>
+                     <td scope="row">Nombre Paciente:</td>
+                     <td id="nombre"></td>
                      <td>Genero:</td>
-                     <td><input type="text" id="genero"></input></td>
+                     <td id="genero"></td>
                      <td>No.Expediente</td>
                      <td id="expediente"></td>
                    </tr>
                    <tr>
-                     <td scope="row">id medico</td>
+                     <td scope="row">Medico:</td>
                      <td id="medico"></td>
+                     <td>Edad:</td>
+                     <td id="edad"></td>
                    </tr>
                    <tr>
                      <td scope="row">Examen</td>
@@ -50,57 +57,57 @@
                    </tr>
                    <tr>
                      <td scope="row">Color </td>
-                     <td><input type="text" id="color"></input></td>
+                     <td id="color"></td>
                      <td>Esterasa leucositoria</td>
-                     <td><input type="text" id="esteresa"></input></td>
+                     <td id="esterasa"></td>
                      <td>Celulas epiteliales</td>
-                     <td><input type="text" id="celulas"></input></td>
+                     <td id="celulas"></td>
                    </tr>
                    <tr>
                      <td scope="row">Aspecto</td>
-                     <td><input type="text" id="aspecto"></input></td>
+                     <td id="aspecto"></td>
                      <td>Nitritos</td>
-                     <td><input type="text" id="nitritos"></input></td>
+                     <td id="nitritos"></td>
                      <td>Erotrocitos</td>
-                     <td><input type="text" id="erotrocitos"></input></td>
+                     <td id="erotrocitos"></td>
                    </tr>
                    <tr>
                      <td scope="row">Gravedad especifica</td>
-                     <td><input type="text" id="gravedad"></input></td>
+                     <td id="gravedad"></td>
                      <td>PH</td>
-                     <td><input type="text" id="ph"></input></td>
+                     <td id="ph"></td>
                      <td>Leucositos</td>
-                     <td><input type="text" id="leucositos"></input></td>
+                     <td id="leucositos"></td>
                    </tr>
                    <tr>
                      <td scope="row"></td>
                      <td></td>
                      <td>Proteinas</td>
-                     <td><input type="text" id="proteinas"></input></td>
+                     <td id="proteinas"></td>
                      <td>Bacterias</td>
-                     <td><input type="text" id="bacterias"></input></td>
+                     <td id="bacterias"></td>
                    </tr>
                    <tr>
                      <td scope="row"></td>
                      <td></td>
                      <td>Glucosa</td>
-                     <td><input type="text" id="glucosa"></input></td>
+                     <td id="glucosa"></td>
                      <td>Mucus</td>
-                     <td><input type="text" id="mucus"></input></td>
+                     <td id="mucus"></td>
                    </tr>
                    <tr>
                      <td scope="row"></td>
                      <td></td>
                      <td>Cuerpos setonicos</td>
-                     <td><input type="text" id="cuerpos"></input></td>
+                     <td id="cuerpos"></td>
                      <td>Cristales</td>
-                     <td><input type="text" id="cristales"></input></td>
+                     <td id="cristales"></td>
                    </tr>
                    <tr>
                      <td scope="row"></td>
                      <td></td>
-                     <td>Urobilinogenos</td>
-                     <td><input type="text" id="urobilinogenos"></input></td>
+                     <td>Urobilinogeno</td>
+                     <td id="urobilinogeno"></td>
                      <td></td>
                      <td></td>
                    </tr>
@@ -108,23 +115,21 @@
                      <td scope="row"></td>
                      <td></td>
                      <td>Bilirrubina</td>
-                     <td><input type="text" id="bilirrubina"></input></td>
+                     <td id="bilirrubina"></td>
                      <td>Cilindors</td>
-                     <td><input type="text" id="cilindors"></input></td>
+                     <td id="cilindors"></td>
                    </tr>
                    <tr>
                      <td scope="row"></td>
                      <td></td>
                      <td>Sangre</td>
-                     <td><input type="text" id="sangre"></input></td>
+                     <td id="sangre"></td>
                      <td>Levaduras</td>
-                     <td><input type="text" id="levaduras"></input></td>
+                     <td id="levaduras"></td>
                    </tr>
                    <tr>
                      <td scope="row">Observaciones:</td>
-                     <td><input type="text" id="observaciones"></input></td>
-                     <td></td>
-                     <td><button type="button" id="guardar">Guardar Cambios</button></td>
+                     <td id="observaciones"></td>
                    </tr>
                  </tbody>
                </table>
@@ -135,6 +140,6 @@
     
 
     <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/analista-controller.js"></script>
+    <script src="js/archivista-controller.js"></script>
 </body>
 </html>
