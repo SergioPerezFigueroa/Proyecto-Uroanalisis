@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.min.css" />
+    <!--
+
+    <link rel="stylesheet" type="text/css" media="screen" href="css/custom.css" />
+    <link rel="shortcut icon" href="img/favicon.ico">
+
+    -->
+    
+</head>
+<body style="background-color:#F9F9F8">
+    
+    <div class="container" style="margin-left: 5rem;margin-top: 2rem;width: 30rem;">
+        <div class="row">
+            <input type="text" placeholder="ID Paciente" id="id"></input>
+            <button type="button" id="btn">buscar</button>
+            <form>
+             <table class="table table-bordered">
+                 <thead>
+                   <tr>
+                     <th scope="col">Uroanalisis</th>
+                   </tr>
+                 </thead>
+                 <tbody>
+                   <tr>
+                     <td scope="row">id recepcionista</td>
+                     <td id="recepcionista"></td>
+                     <td>Genero:</td>
+                     <td><input type="text" id="genero"></input></td>
+                     <td>No.Expediente</td>
+                     <td id="expediente"></td>
+                   </tr>
+                   <tr>
+                     <td scope="row">id medico</td>
+                     <td id="medico"></td>
+                   </tr>
+                   <tr>
+                     <td scope="row">Examen</td>
+                     <td> Macroscopico</td>
+                     <td>Examen</td>
+                     <td> Quimico</td>
+                     <td>Examen</td>
+                     <td> Microscopico</td>
+                   </tr>
+                   <tr>
+                     <td scope="row">Color </td>
+                     <td><input type="text" id="color"></input></td>
+                     <td>Esterasa leucositoria</td>
+                     <td><input type="text" id="esteresa"></input></td>
+                     <td>Celulas epiteliales</td>
+                     <td><input type="text" id="celulas"></input></td>
+                   </tr>
+                   <tr>
+                     <td scope="row">Aspecto</td>
+                     <td><input type="text" id="aspecto"></input></td>
+                     <td>Nitritos</td>
+                     <td><input type="text" id="nitritos"></input></td>
+                     <td>Erotrocitos</td>
+                     <td><input type="text" id="erotrocitos"></input></td>
+                   </tr>
+                   <tr>
+                     <td scope="row">Gravedad especifica</td>
+                     <td><input type="text" id="gravedad"></input></td>
+                     <td>PH</td>
+                     <td><input type="text" id="ph"></input></td>
+                     <td>Leucositos</td>
+                     <td><input type="text" id="leucositos"></input></td>
+                   </tr>
+                   <tr>
+                     <td scope="row"></td>
+                     <td></td>
+                     <td>Proteinas</td>
+                     <td><input type="text" id="proteinas"></input></td>
+                     <td>Bacterias</td>
+                     <td><input type="text" id="bacterias"></input></td>
+                   </tr>
+                   <tr>
+                     <td scope="row"></td>
+                     <td></td>
+                     <td>Glucosa</td>
+                     <td><input type="text" id="glucosa"></input></td>
+                     <td>Mucus</td>
+                     <td><input type="text" id="mucus"></input></td>
+                   </tr>
+                   <tr>
+                     <td scope="row"></td>
+                     <td></td>
+                     <td>Cuerpos setonicos</td>
+                     <td><input type="text" id="cuerpos"></input></td>
+                     <td>Cristales</td>
+                     <td><input type="text" id="cristales"></input></td>
+                   </tr>
+                   <tr>
+                     <td scope="row"></td>
+                     <td></td>
+                     <td>Urobilinogenos</td>
+                     <td><input type="text" id="urobilinogenos"></input></td>
+                     <td></td>
+                     <td></td>
+                   </tr>
+                   <tr>
+                     <td scope="row"></td>
+                     <td></td>
+                     <td>Bilirrubina</td>
+                     <td><input type="text" id="bilirrubina"></input></td>
+                     <td>Cilindors</td>
+                     <td><input type="text" id="cilindors"></input></td>
+                   </tr>
+                   <tr>
+                     <td scope="row"></td>
+                     <td></td>
+                     <td>Sangre</td>
+                     <td><input type="text" id="sangre"></input></td>
+                     <td>Levaduras</td>
+                     <td><input type="text" id="levaduras"></input></td>
+                   </tr>
+                   <tr>
+                     <td scope="row">Observaciones:</td>
+                     <td><input type="text" id="observaciones"></input></td>
+                     <td></td>
+                     <td><button type="button" id="guardar">Guardar Cambios</button></td>
+                   </tr>
+                 </tbody>
+               </table>
+           </form>
+        </div>
+    </div>
+
+    
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/analista-controller.js"></script>
+</body>
+</html>
