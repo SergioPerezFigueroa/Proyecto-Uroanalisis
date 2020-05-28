@@ -23,13 +23,35 @@
         <input style="margin-left: 10rem;" type=submit  id="btn-buscar" name=btnG VALUE="Buscar paciente" />
     </div>
 
-    <div class="container" style="margin-left: 28rem;margin-top: 8rem;width: 30rem;">
-      <form id=form-login class="border" style="padding-top: 20px;padding-left:20px;background-color: rgb(255, 255, 255)">
-        <p style="margin-left: 9rem;"><strong>Acceso a sistema</strong></p>
-        <input class="caja-texto" type="text" id="id" style="margin-top: 10px;width: 92%" placeholder="ID"><br>
-        <input class="caja-texto" type="password" id="password" style="margin-top: 10px;width: 92%;margin-top: 10px" placeholder="Password"><br>
-        <div class="row">
-          <button type="button" id="btn-guarar" style="margin-top: 10px;background-color: #3EA1C1;margin-bottom: 20px;margin-left: 15px"><a><span style="color:white">Log In</span></a></button>
+        <div class="table" style="margin-left: 28rem;margin-top: 1rem;width: 50rem;"></div>
+            <table class="egt">
+                <tr>
+                    <th scope="row">Paciente</th>
+                    <th>Fecha de solicitud</th>
+                    <th>Médico</th>
+                    <th>Generar reporte</th>
+                </tr>
+                <tr>
+                    <th>Nombre Paciente 1</th>
+                    <td>28/05/2020</td>
+                    <td>Médico3</td>
+                    <td><a href=http://localhost/solicitar>Solicitar examen</a></td>
+                    </tr>
+                <tr>
+                    <th>Nombre Paciente 2</th>
+                    <td>28/05/2020</td>
+                    <td>Médico1</td>
+                    <td><a href=http://localhost/solicitar>Solicitar examen</a></td>
+                </tr>
+                <tr>
+                    <th>Nombre Paciente 3</th>
+                    <td>28/05/2020</td>
+                    <td>Médico2</td>
+                    <td><a href=http://localhost/solicitar>Solicitar examen</a></td>
+                </tr> 
+            </table>
+            <button type="button" id="btn-aceptar" style="margin-top: 1px;background-color: #3EA1C1;margin-bottom: 2px;margin-left: 500px"><a><span style="color:white">Aceptar</span></a></button>
+            <button type="button" id="btn-cancelar" style="margin-top: 1px;background-color: #3EA1C1;margin-bottom: 20px;margin-left: 500px"><a><span style="color:white">Cancelar</span></a></button>
         </div>
       </form>
     </div>
