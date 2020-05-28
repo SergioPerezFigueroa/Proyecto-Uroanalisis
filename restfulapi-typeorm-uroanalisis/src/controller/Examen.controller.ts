@@ -14,13 +14,13 @@ export class ExamenController{
         this.app.route("/examenes").get(this.examen_service.getAll);
 
         this.app.route("/examen/:id")
-        .get(this.examen_service.getOneList)//archivista
+        .get(this.examen_service.getOneList)//archivista,recepcionista
         .put(this.examen_service.bigUpdate);//analista
 
         this.app.route("/examenV/:id")
         .get(this.examen_service.getOneV);//archivista
 
-        this.app.route("/examen/:id/Recepcionista").put(this.examen_service.smallUpdate);
+        this.app.route("/examen/:id/Recepcionista").put(this.examen_service.smallUpdate);//recepcionista
 
         
         this.app.route("/exameneshechos").post(this.examen_service.getDateExam);
