@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.min.css" />
+    <!--
+
+    <link rel="stylesheet" type="text/css" media="screen" href="css/custom.css" />
+    <link rel="shortcut icon" href="img/favicon.ico">
+
+    -->
+    
+</head>
+<body style="background-color:#F9F9F8">
+    
+    <div class="container" style="margin-left: 5rem;margin-top: 2rem;width: 30rem;">
+        <div class="row">
+            <input type="text" placeholder="ID Paciente" id="id"></input>
+            <button type="button" id="btn">buscar</button>
+            <div class="form-group">
+                <select class="form-control" id="seleccion">
+                  
+                </select>
+              </div>  
+            <form>
+             <table class="table table-bordered">
+                 <thead>
+                   <tr>
+                     <th scope="col">Uroanalisis</th>
+                   </tr>
+                 </thead>
+                 <tbody>
+                   <tr>
+                     <td scope="row">Nombre Paciente:</td>
+                     <td id="nombre"></td>
+                     <td>Genero:</td>
+                     <td id="genero"></td>
+                     <td>No.Expediente</td>
+                     <td id="expediente"></td>
+                   </tr>
+                   <tr>
+                     <td scope="row">Medico:</td>
+                     <td id="medico"></td>
+                     <td>Edad:</td>
+                     <td id="edad"></td>
+                   </tr>
+                   <tr>
+                     <td scope="row">Examen</td>
+                     <td> Macroscopico</td>
+                     <td>Examen</td>
+                     <td> Quimico</td>
+                     <td>Examen</td>
+                     <td> Microscopico</td>
+                   </tr>
+                   <tr>
+                     <td scope="row">Color </td>
+                     <td id="color"></td>
+                     <td>Esterasa leucositoria</td>
+                     <td id="esterasa"></td>
+                     <td>Celulas epiteliales</td>
+                     <td id="celulas"></td>
+                   </tr>
+                   <tr>
+                     <td scope="row">Aspecto</td>
+                     <td id="aspecto"></td>
+                     <td>Nitritos</td>
+                     <td id="nitritos"></td>
+                     <td>Erotrocitos</td>
+                     <td id="erotrocitos"></td>
+                   </tr>
+                   <tr>
+                     <td scope="row">Gravedad especifica</td>
+                     <td id="gravedad"></td>
+                     <td>PH</td>
+                     <td id="ph"></td>
+                     <td>Leucositos</td>
+                     <td id="leucositos"></td>
+                   </tr>
+                   <tr>
+                     <td scope="row"></td>
+                     <td></td>
+                     <td>Proteinas</td>
+                     <td id="proteinas"></td>
+                     <td>Bacterias</td>
+                     <td id="bacterias"></td>
+                   </tr>
+                   <tr>
+                     <td scope="row"></td>
+                     <td></td>
+                     <td>Glucosa</td>
+                     <td id="glucosa"></td>
+                     <td>Mucus</td>
+                     <td id="mucus"></td>
+                   </tr>
+                   <tr>
+                     <td scope="row"></td>
+                     <td></td>
+                     <td>Cuerpos setonicos</td>
+                     <td id="cuerpos"></td>
+                     <td>Cristales</td>
+                     <td id="cristales"></td>
+                   </tr>
+                   <tr>
+                     <td scope="row"></td>
+                     <td></td>
+                     <td>Urobilinogeno</td>
+                     <td id="urobilinogeno"></td>
+                     <td></td>
+                     <td></td>
+                   </tr>
+                   <tr>
+                     <td scope="row"></td>
+                     <td></td>
+                     <td>Bilirrubina</td>
+                     <td id="bilirrubina"></td>
+                     <td>Cilindors</td>
+                     <td id="cilindors"></td>
+                   </tr>
+                   <tr>
+                     <td scope="row"></td>
+                     <td></td>
+                     <td>Sangre</td>
+                     <td id="sangre"></td>
+                     <td>Levaduras</td>
+                     <td id="levaduras"></td>
+                   </tr>
+                   <tr>
+                     <td scope="row">Observaciones:</td>
+                     <td id="observaciones"></td>
+                   </tr>
+                 </tbody>
+               </table>
+           </form>
+        </div>
+    </div>
+
+    
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/archivista-controller.js"></script>
+</body>
+</html>

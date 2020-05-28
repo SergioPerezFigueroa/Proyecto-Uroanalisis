@@ -14,8 +14,11 @@ export class ExamenController{
         this.app.route("/examenes").get(this.examen_service.getAll);
 
         this.app.route("/examen/:id")
-        .get(this.examen_service.getOneList)
+        .get(this.examen_service.getOneList)//archivista
         .put(this.examen_service.bigUpdate);//analista
+
+        this.app.route("/examenV/:id")
+        .get(this.examen_service.getOneV);//archivista
 
         this.app.route("/examen/:id/Recepcionista").put(this.examen_service.smallUpdate);
 

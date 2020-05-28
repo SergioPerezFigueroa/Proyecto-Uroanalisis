@@ -12,8 +12,13 @@ export class ExamenService{
 
     //este endpoint es de analista , cambiar id paciente por id examen
     public async getOne(req: Request, res: Response){
-        const examen : Examen[] = await getConnection().getRepository(Examen).find({where: {PacienteID: req.params.id}});
+        const examen : Examen[] = await getConnection().getRepository(Examen).find({where: {ExamenID: req.params.id}});
         res.status(200).json(examen[0]);
+    }
+    //endpoint de archivista al seleccionar un examen
+    public async getOneV(req: Request, res: Response){
+        const examenv = await getConnection().getRepository(ViewExamenesDefault).find({where: {ExamenID: req.params.id}});
+        res.status(200).json(examenv);
     }
     //endpoint de archivista view de examenes default
     public async getOneList(req: Request, res: Response){
