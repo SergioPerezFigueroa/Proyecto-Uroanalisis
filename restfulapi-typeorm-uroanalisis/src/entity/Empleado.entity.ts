@@ -48,7 +48,7 @@ export class Empleado{
 }
 
 export interface Ilogin{    
-    EmpleadoID : number ; 
+    EmpleadoID : string ; 
     Password : String ; 
    
 }
