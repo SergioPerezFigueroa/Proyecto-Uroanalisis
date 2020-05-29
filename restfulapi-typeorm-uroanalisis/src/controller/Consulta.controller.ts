@@ -13,4 +13,5 @@ export class ConsultaController{
     private routes(){
         this.app.route("/consulta").post(this.Consulta_service.createOne);
     }
+    
 }
