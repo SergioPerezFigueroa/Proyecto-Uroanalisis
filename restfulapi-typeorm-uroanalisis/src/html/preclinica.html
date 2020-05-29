@@ -25,15 +25,12 @@
     <div class="container" style="margin-left: 45rem;margin-top: 2rem;width: 40rem;">
       <form id=form-login class="border" style="padding-top: 60px;padding-left:60px;background-color: rgb(255, 255, 255)">
         <p style="margin-left: 9rem;"><strong>Pre-Clinica</strong></p>
-        <h4 style="margin-left: 2rem;margin-top: 2rem;">Presion arterial:</h4>
-                    <input style="margin-top: 1rem;margin-left: 2rem" type="search" name=domains placeholder="mmHg"/><br>  
-         <h4 style="margin-left: 2rem;margin-top: 2rem;">temperatura:</h4>
-                    <input style="margin-top: 1rem;margin-left: 2rem" type="search" name=domains placeholder="Grados"/><br> 
-         <h4 style="margin-left: 2rem;margin-top: 2rem;">Estatura:</h4>
-                    <input style="margin-top: 1rem;margin-left: 2rem" type="search" name=domains placeholder="Cm"/><br> 
-         <h4 style="margin-left: 2rem;margin-top: 2rem;">Peso:</h4>
-                    <input style="margin-top: 1rem;margin-left: 2rem" type="search" name=domains placeholder="Lb"/><br>
-         <div class="row"><div> <label for="generos"style="margin-top: 1rem;margin-left: 2rem">Medicos Disponibles:</label>
+        <input class="caja-texto" type="text" id="PacienteID" style="margin-top: 10px;width: 92%" placeholder="PacienteID"><br>
+        <input class="caja-texto" type="text" id="Presion" style="margin-top: 10px;width: 92%;margin-top: 10px" placeholder="Presion arterial(mmHg)"><br>
+        <input class="caja-texto" type="text" id="temperatura" style="margin-top: 10px;width: 92%" placeholder="temperatura(grados)"><br>
+        <input class="caja-texto" type="text" id="Estatura" style="margin-top: 10px;width: 92%;margin-top: 10px" placeholder="Estatura(cm)"><br>
+        <input class="caja-texto" type="text" id="Peso" style="margin-top: 10px;width: 92%;margin-top: 10px" placeholder="Peso(lb)"><br>
+         <div class="row"><div> <label for="generos"style="margin-top: 0rem;margin-left: 1rem">Medicos Disponibles:</label>
                         <select name="Lista de Medicos " id="genero">
                             <option value="Seleccionar">Lista de medicos</option>
                             <option value="Hombre">Manuel Mejia</option>
@@ -54,6 +51,6 @@
     </div>
     
     <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/login-controller.js"></script>
+    <script src="js/preclinica-controller.js"></script>
 </body>
 </html>

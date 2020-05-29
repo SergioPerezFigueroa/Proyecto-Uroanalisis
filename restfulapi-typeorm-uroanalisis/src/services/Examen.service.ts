@@ -10,7 +10,7 @@ export class ExamenService{
         res.status(200).json(examens);
     }
 
-    //este endpoint es de analista , cambiar id paciente por id examen
+    //este endpoint es de analista
     public async getOne(req: Request, res: Response){
         const examen : Examen[] = await getConnection().getRepository(Examen).find({where: {ExamenID: req.params.id}});
         res.status(200).json(examen[0]);
